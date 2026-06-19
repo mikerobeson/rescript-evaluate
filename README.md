@@ -2,7 +2,7 @@
 
 # RESCRIPt-evaluate
 
-RESCRIPt-eval is a supplementary python 3 package for the [RESCRIPt](https://github.com/bokulich-lab/RESCRIPt) plugin that supports cross validation for reference sequence and taxonomy databases. Thus, `rescript-eval` depends upon the [RESCRIPt](https://github.com/bokulich-lab/RESCRIPt) plugin within the [rachis-qiime2-*](https://library.qiime2.org/quickstart/qiime2) branch.
+RESCRIPt-eval is a supplementary python 3 package for the [RESCRIPt](https://github.com/bokulich-lab/RESCRIPt) plugin that supports cross validation for reference sequence and taxonomy databases. Thus, `rescript-evaluate` depends upon the [RESCRIPt](https://github.com/bokulich-lab/RESCRIPt) plugin within the [rachis-qiime2-*](https://library.qiime2.org/quickstart/qiime2) branch.
 
 We are essentially returning some capabilities that have recently been removed from the main RESCRIPt plugin. Specifically, these are `evaluate-cross-validate` and `evaluate-fit-classifier`. We may add other supplimentary tools in the future. 
 
