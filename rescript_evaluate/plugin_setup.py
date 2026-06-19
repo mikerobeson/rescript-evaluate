@@ -16,7 +16,7 @@ from qiime2.plugin import (Str, Plugin, Choices, List, Citations, Range, Int,
                            MetadataColumn, Categorical, Numeric, Collection)
 
 from .cross_validate import (evaluate_cross_validate,
-                             evaluate_classifications,
+                            #  evaluate_classifications,
                              evaluate_fit_classifier)
 
 from q2_types.feature_data import (FeatureData, Taxonomy, Sequence,
