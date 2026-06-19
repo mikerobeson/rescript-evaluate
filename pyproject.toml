@@ -23,22 +23,6 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
-[tool.versioningit.vcs]
-method = "git-archive"
-describe-subst = "2026.4.0"
-default-tag = "0.0.1"
-
-[tool.versioningit.next-version]
-method = "minor"
-
-[tool.versioningit.format]
-distance = "{base_version}+{distance}.{vcs}{rev}"
-dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
-distance-dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
-
-[tool.versioningit.write]
-file = "rescript_eval/_version.py"
-
 [tool.setuptools]
 include-package-data = true
 
