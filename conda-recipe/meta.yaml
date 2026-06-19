@@ -1,5 +1,5 @@
 package:
-  name: rescript_evaluate
+  name: rescript-evaluate
   version: {{ PLUGIN_VERSION }}
 source:
   path: ..
@@ -42,6 +42,7 @@ test:
   - rescript
   - rescript_evaluate
   - qiime2.plugins.rescript
+  - qiime2.plugins.rescript_evaluate
   commands:
   - py.test --pyargs rescript
 about:

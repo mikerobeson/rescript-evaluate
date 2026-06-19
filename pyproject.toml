@@ -1,5 +1,5 @@
 [project]
-name = "rescript_evaluate"
+name = "rescript-evaluate"
 authors = [
     { name = "Nicholas Bokulich", email = "nbokulich@gmail.com" }
 ]
@@ -13,7 +13,7 @@ Homepage = "https://github.com/mikerobeson/rescript_evaluate"
 Repository = "https://github.com/mikerobeson/rescript_evaluate"
 
 [project.entry-points.'qiime2.plugins']
-"rescript_eval" = "rescript_eval.plugin_setup:plugin"
+"rescript_evaluate" = "rescript_evaluate.plugin_setup:plugin"
 
 [build-system]
 requires = [
@@ -28,7 +28,7 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["rescript_eval*"]
+include = ["rescript_evaluate*"]
 
 [tool.setuptools.package-data]
-rescript_eval = ["**/*"]
+rescript_evaluate = ["**/*"]

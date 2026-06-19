@@ -17,7 +17,7 @@ Once QIIME 2 is installed, you can do he following:
 
 ```
 conda activate rachis-qiime2-2026.4
-pip install git+https://github.com/mikerobeson/rescript_evaluate
+pip install git+https://github.com/mikerobeson/rescript-evaluate
 qiime dev refresh-cache
 ```
 

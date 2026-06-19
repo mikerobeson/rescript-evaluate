@@ -16,6 +16,7 @@ from qiime2.plugin import (Str, Plugin, Choices, List, Citations, Range, Int,
                            MetadataColumn, Categorical, Numeric, Collection)
 
 from .cross_validate import (evaluate_cross_validate,
+                             evaluate_classifications,
                              evaluate_fit_classifier)
 
 from q2_types.feature_data import (FeatureData, Taxonomy, Sequence,
@@ -37,10 +38,10 @@ from rescript.ncbi import (
 citations = Citations.load('citations.bib', package='rescript_evaluate')
 
 plugin = Plugin(
-    name='rescript_evaluate',
+    name='rescript-evaluate',
     version=rescript.__version__,
-    website="https://github.com/mikerobeson/rescript_evaluate",
-    package='rescript',
+    website="https://github.com/mikerobeson/rescript-evaluate",
+    package='rescript_evaluate',
     description=('Supplementary RESCRIPt tools for '
                  'reference sequence and taxonomy evaluation.'),
     short_description=(

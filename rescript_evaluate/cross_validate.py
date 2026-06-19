@@ -14,6 +14,7 @@ from sklearn.model_selection import StratifiedKFold
 
 from q2_types.feature_data import DNAFASTAFormat, DNAIterator
 import rescript
+import rescript.evaluate
 from rescript.evaluate import _taxonomic_depth, _process_labels
 
 
@@ -218,7 +219,7 @@ def evaluate_classifications(ctx,
                       x_measure='Level',
                       y_measure='F-Measure',
                       group_by='Dataset',
-                      title='RESCRIPt Evaluate Classifications')
+                      title='RESCRIPt-evaluate Evaluate Classifications')
     return plots
 
 
