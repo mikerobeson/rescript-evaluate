@@ -110,9 +110,6 @@ plugin.pipelines.register_function(
         'reference data are viable), hence THIS PIPELINE IS USEFUL FOR '
         'TRAINING FEATURE CLASSIFIERS AND THEN EVALUATING THEM ON-THE-FLY.'),
     citations=[citations['bokulich2018optimizing']],
-    migrated={'to_plugin': 'q2-feature-classifier',
-              'from_distro': 'amplicon',
-              'to_distro': 'amplicon', 'epoch': '2026.1'},
 )
 
 
@@ -155,9 +152,6 @@ plugin.pipelines.register_function(
         'enable appropriate label stratification. See the cited reference '
         '(Bokulich et al. 2018) for more details.'),
     citations=[citations['bokulich2018optimizing']],
-    migrated={'to_plugin': 'q2-feature-classifier',
-              'from_distro': 'amplicon',
-              'to_distro': 'amplicon', 'epoch': '2026.1'},
 )
 
 
