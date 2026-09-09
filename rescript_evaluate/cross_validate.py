@@ -14,6 +14,7 @@ from sklearn.model_selection import StratifiedKFold
 
 from q2_types.feature_data import DNAFASTAFormat, DNAIterator
 from rescript.cross_validate import _validate_index_is_superset
+# import biom
 
 
 def evaluate_fit_classifier(ctx,
@@ -21,7 +22,8 @@ def evaluate_fit_classifier(ctx,
                             taxonomy,
                             reads_per_batch='auto',
                             n_jobs=1,
-                            confidence=0.7):
+                            confidence=0.7,
+                            class_weight=None):
     '''
     taxonomy: FeatureData[Taxonomy] artifact of taxonomy labels
     sequences: FeatureData[Sequence] artifact of sequences
@@ -40,7 +42,8 @@ def evaluate_fit_classifier(ctx,
 
     # Deploy perfect classifier! (no CV, lots of data leakage)
     classifier, = fit(reference_reads=sequences,
-                      reference_taxonomy=taxonomy)
+                      reference_taxonomy=taxonomy,
+                      class_weight=class_weight)
     new_time = _check_time(new_time, 'Training')
     observed_taxonomy, = classify(reads=sequences,
                                   classifier=classifier,

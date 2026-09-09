@@ -12,6 +12,7 @@ from qiime2.plugin import (Plugin, Citations, Range, Int,
 from .cross_validate import (evaluate_cross_validate,
                              evaluate_fit_classifier)
 from q2_types.feature_data import (FeatureData, Taxonomy, Sequence)
+from q2_types.feature_table import (FeatureTable, RelativeFrequency)
 from q2_feature_classifier.classifier import (_parameter_descriptions,
                                               _classify_parameters)
 from q2_feature_classifier._taxonomic_classifier import TaxonomicClassifier
@@ -72,7 +73,8 @@ super_lca_desc = (
 plugin.pipelines.register_function(
     function=evaluate_fit_classifier,
     inputs={'sequences': FeatureData[Sequence],
-            'taxonomy': FeatureData[Taxonomy]},
+            'taxonomy': FeatureData[Taxonomy],
+            'class_weight': FeatureTable[RelativeFrequency]},
     parameters={
         'reads_per_batch': _classify_parameters['reads_per_batch'],
         'n_jobs': _classify_parameters['n_jobs'],
@@ -84,7 +86,8 @@ plugin.pipelines.register_function(
         'sequences': 'Reference sequences to use for classifier '
                      'training/testing.',
         'taxonomy': 'Reference taxonomy to use for classifier '
-                    'training/testing.'},
+                    'training/testing.',
+        'class_weight': 'User supplied / bespoke class weights.'},
     parameter_descriptions={
         'reads_per_batch': _parameter_descriptions['reads_per_batch'],
         'n_jobs': _parameter_descriptions['n_jobs'],
